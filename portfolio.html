@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#Home">HOME</a></li>
+                    <li><a href="#about">INTRODUCTION</a></li>
+                    <li><a href="#skills">SKILLS</a></li>
+                    <li><a href="#projects">PROJECTS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p></p>
+                <h1>Hi, I'm <b><u>Daniel</b></u> <br>from TamilNadu ...</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>Hi I'm Daniel hail from Coimbatore,TamilNadu. I am pursuing B.Tech Stream Artificial Intelligence & Data Science in Karpagam Institute of Technology,Coimbatore. I'm interested in front-end development. I'm currently working as an intern in Moonraft Innovation Labs.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('hobbies')"><b>Hobbies</b></p>
+                        <p class="tab-links" onclick="opentab('languages')"><b>Languages Known</b></p>
+                    </div>
+                    <div class="tab-contents active-tab" id="hobbies">
+                        <ul>
+                            <li><span>Reading books</span></li>
+                            <li><span>Practical learning</span></li>
+                            <li><span>Travelling</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="languages">
+                        <ul>
+                            <li><span>English</span></li>
+                            <li><span>Tamil</span></li>
+                            <li><span>Malayalam</span></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div id="skills">
+    <div class="container">
+        <h1 class="sub-title">Skills</h1>
+        <div class="skill-list">
+            <div>
+                <h2>Web Design</h2>
+                <a href="#"></a>
+            </div>
+            <div>
+                <h2>SQL</h2>
+                <a href="#"></a>
+            </div>
+            <div>
+                <h2>Java</h2>
+                <a href="#"></a>
+            </div>
+            <div>
+                <h2>Python</h2>
+                <a href="#"></a>
+            </div>
+            <div>
+                <h2>Data Analytics</h2>
+                <a href="#"></a>
+            </div>
+            <div>
+                <h2>Problem Solving</h2>
+                <a href="#"></a>
+            </div>
+            <div>
+                <h2>Machine Learning</h2>
+                <a href="#"></a>
+            </div>
+            <div>
+                <h2>Communication</h2>
+                <a href="#"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">Projects</h1>
+        <div class="skill-list">
+            <div>
+                <h2>Movie Recommendation System using Cosine Similarity</h2>
+               <p>Real-world recommendation systems involve more complexities, such as addressing the cold start problem (new users or items), optimizing for efficiency, and potentially using techniques like matrix factorization or deep learning for better results.</p>
+            </div>
+            <div>
+                <h2>Plant Disease Detection </h2>
+               <p>Creating an accurate and effective plant disease detection system requires a substantial amount of labeled data, model tuning, and validation. Collaboration with domain experts, such as plant pathologists, can also enhance the system's performance.</p>
+            </div>
+            <div>
+                <h2>Salary Prediction
+                    using Multiple Linear Regression.
+                    </h2>
+               <p>Multiple linear regression can provide valuable insights into salary prediction, it has assumptions that need to be checked (e.g., linearity, independence, homoscedasticity, normality). Additionally, more advanced techniques like regularization and feature scaling can enhance model performance.</p>
+            </div>
+</div>
+</div>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-regular fa-envelope"></i><strong>daniel5373@gmail.com</strong></p>
+                <p><i class="fa-solid fa-phone"></i><strong>+91 7449290770</strong></p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/daniel-d-033b72239"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <a href="Images/Resume.pdf" download class="btn btn2" style="text-decoration: none; color: white;">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form action="submit.html">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2" style="color: white;">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
